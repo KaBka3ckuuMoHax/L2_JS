@@ -1,0 +1,13 @@
+//1 zadanie
+//https://www.codewars.com/kata/55fd4919ce2a1d7c0d0000f3
+function hasTwoCubeSums(n) {
+	//TODO
+  let count = 0;
+  let max = Math.ceil(Math.cbrt(n));
+  for(let i = 0; i < max; i += 1)
+    {
+      let x = Math.cbrt(n - (i*i*i));
+      if(x%1 == 0) count +=1
+    }
+  return count >= 4
+}
