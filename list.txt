@@ -81,3 +81,32 @@ function findMissing(list) {
         }
     }
 }
+
+
+//zadanie 5
+//https://www.codewars.com/kata/54d512e62a5e54c96200019e
+function primeFactors(n){
+    let string = "";
+  
+  for(let i = 2; n != 1; i++)
+    {
+      if(n%i != 0)
+        {
+          continue;
+        }
+      let counter = 0;
+      while(n % i === 0) {
+        n = n / i;
+        counter++;
+      }
+      if(counter > 1)
+        {
+          string = string + `(${i}**${counter})`;
+        }
+      else
+        {
+          string = string + `(${i})`;
+        }
+    }
+  return string;
+}
