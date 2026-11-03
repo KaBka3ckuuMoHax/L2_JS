@@ -11,3 +11,21 @@ function hasTwoCubeSums(n) {
     }
   return count >= 4
 }
+
+
+//2zadanie 
+//https://www.codewars.com/kata/556d120c7c58dacb9100008b/train/javascript
+function ipv4Parser(ip, mask){
+  //your code here
+  let IPsp = ip.split(".");
+  let MASKsp = mask.split(".");
+  
+  let ipP = [];
+  let maskP = [];
+  for(let i = 0;i < 4;i++)
+    {
+      ipP[i] = Number(IPsp[i]) & Number(MASKsp[i]);
+      maskP[i] = Number(IPsp[i]) & ~Number(MASKsp[i]);
+    }
+  return [ipP.join('.'), maskP.join('.')];
+} 
