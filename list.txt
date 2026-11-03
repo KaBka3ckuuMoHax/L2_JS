@@ -140,3 +140,24 @@ function toWeirdCase(string){
     }
   return mas.join("");
 }
+
+//zadanie 7
+//https://www.codewars.com/kata/58f5c63f1e26ecda7e000029
+function wave(str){
+  let string = [];
+  for(let i = 0; i < str.length; i++)
+    {
+      let arr = str.split("");
+      for(let j = 0; j < arr.length; j++)
+        {
+          arr[j] = arr[j].toLowerCase();
+        }
+      if(arr[i] === " ")
+        {
+          continue;
+        }
+      arr[i] = arr[i].toUpperCase();
+      string.push(arr.join(""));
+    }
+  return string;
+}
