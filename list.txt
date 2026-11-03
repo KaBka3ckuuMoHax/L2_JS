@@ -60,3 +60,25 @@ function whatCentury(year)
         break;
     }
 }
+
+
+//zadanie 4
+//https://www.codewars.com/kata/52de553ebb55d1fca3000371/train/javascript
+function findMissing(list) {
+  let missing = list[1] - list[0];
+  let lenghtlist = list.length;
+  for(let i = 1; i < lenghtlist - 1; i++)
+    {
+      if(list[i+1] - list[i] < missing)
+        {
+          missing = list[i+1] - list[i];
+        }
+    }
+  for(let i = 0; i < lenghtlist - 1; i++)
+    {
+      if(list[i] + missing != list[i+1])
+        {
+          return list[i] + missing;
+        }
+    }
+}
