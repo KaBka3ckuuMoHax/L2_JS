@@ -110,3 +110,33 @@ function primeFactors(n){
     }
   return string;
 }
+
+//zadanie 6
+//
+function toWeirdCase(string){
+  //TODO
+  let counter = 0;
+  let mas = string.split("");
+  let maslen = mas.length;
+  for(let i = 0; i < maslen; i++)
+    {
+      if(mas[i] == " ")
+        {
+          counter = 0;
+          continue;
+        }
+      if(counter % 2 == 0)
+        {
+          mas[i] = mas[i].toUpperCase();
+          counter +=1;
+          continue;
+        }
+      else
+        {
+          mas[i] = mas[i].toLowerCase();
+        }
+      counter+=1;
+      continue;
+    }
+  return mas.join("");
+}
