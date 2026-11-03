@@ -29,3 +29,34 @@ function ipv4Parser(ip, mask){
     }
   return [ipP.join('.'), maskP.join('.')];
 } 
+
+//3zadanie
+//https://www.codewars.com/kata/52fb87703c1351ebd200081f/solutions/javascript?filter=me&sort=best_practice&invalids=false
+
+function whatCentury(year)
+{
+   let century = Number(year);
+   century = Math.ceil(year * 0.01);
+   if(century < 20)
+     {
+       return century + "th";
+     }
+  switch(century % 10)
+    {
+      case 1:
+        return century + "st";
+        break;
+      
+      case 2:
+        return century + "nd";
+        break;
+        
+      case 3:
+        return century + "rd";
+        break;
+      
+      default:
+        return century + "th";
+        break;
+    }
+}
