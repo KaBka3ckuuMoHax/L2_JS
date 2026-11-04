@@ -216,3 +216,31 @@ function domainName(url){
     }
   return turl.split('.')[0];
 }
+
+
+//zadanie 12
+//https://www.codewars.com/kata/5594c4599934000e1e00002e/train/javascript
+function longest(arr, n) {
+//code me
+  let arrlength = arr.length;
+  let bool;
+  for(let i = 0; i < arrlength; i++)
+    {
+      bool = false;
+      for(let j = 0; j < arrlength - i - 1; j++)
+        {
+          if(arr[j].length < arr[j+1].length)
+            {
+              let temp = arr[j];
+              arr[j] = arr[j+1];
+              arr[j+1] = temp;
+              bool = true;
+            }
+        }
+      if(!bool)
+        {
+          break;
+        }
+    }
+  return arr[n-1];
+}
