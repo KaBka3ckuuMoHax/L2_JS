@@ -161,3 +161,24 @@ function wave(str){
     }
   return string;
 }
+
+
+//zadanie 8
+//https://www.codewars.com/kata/5842df8ccbd22792a4000245/train/javascript
+function expandedForm(num) {
+  num = Math.abs(num);
+  num = Math.floor(num);
+  num = String(num);
+  let arr = [];
+  let numlength = num.length;
+  for(let i = 0; i < numlength; i++)
+    {
+      let dig = Number(num[i]);
+      if(dig !== 0)
+        {
+          let temp = dig * Math.pow(10,numlength - 1 - i);
+          arr.push(temp);
+        }
+    }
+  return arr.join(" + ")
+}
