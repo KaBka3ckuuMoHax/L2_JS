@@ -195,3 +195,24 @@ function solution(str){
   return final;
 }
 }
+
+
+//zadanie 11
+//https://www.codewars.com/kata/514a024011ea4fb54200004b/train/javascript
+function domainName(url){
+  //your code here
+  let turl = url;
+  if(turl.startsWith('http://'))
+    {
+      turl = turl.slice(7);
+    }
+  if(turl.startsWith('https://'))
+    {
+      turl = turl.slice(8);
+    }
+  if(turl.startsWith('www.'))
+    {
+      turl = turl.slice(4);
+    }
+  return turl.split('.')[0];
+}
