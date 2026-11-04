@@ -181,4 +181,17 @@ function expandedForm(num) {
         }
     }
   return arr.join(" + ")
+
+
+//zadanie 9
+//https://www.codewars.com/kata/515de9ae9dcfc28eb6000001/train/javascript
+function solution(str){
+  let strlen = str.length;
+  let final = [];
+   for(let i = 0; i < strlen; i+=2)
+     {
+       final.push(str[i] + (str[i+1] || "_"));
+     }
+  return final;
+}
 }
